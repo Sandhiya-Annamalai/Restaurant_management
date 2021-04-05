@@ -1,185 +1,181 @@
-<%- include('base/header') -%>
+<%- include('../base/header') -%>
+<%- include('../base/navbar') -%>
+<div class="container mb-4">
 
-<header class="header" id="home">
+    <div class="row mt-4">
 
-  <nav class="navbar navbar-expand-lg navbar-black fixed-top" id="mainNav">
-    <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="text-info font-weight-bold">Mayura</span></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#chefs">Chefs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#Menus">Menus</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#reserve">CALL NOW!  022 022 0220 <span class="reserve"> Reserve a table</span></a>
-          </li>
-          <% if (user) { %>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="/users/profile">Profile <img src="<%= '/img/' + user.avatar %>" class="rounded-circle" style="width: 32px;height: 30px;" alt="...">
-            </a>
-          </li>
-          <% } %>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="jumbotron" style="background-color: #2039c5a3;height: 100%;">
-    <div class="m-5" style="position: relative;top: 8vw;">
-      <p class="display-2 lead text-white text-center" style="border-bottom:1px solid #2f46ac;">The <span class="text-info font-weight-bold">Mayura</span></p>
-      <p class="lead text-blue text-center">READY TO BE OPENED</p>
-    </div>
-  </div>
- 
-  </header>
-
-  <section id="about" class="m-5">
-    <div class="container">
-      <div class="row bg-white">
-        <div class="col-lg-6 mx-auto mt-3">
-            <h4 class="m-3">ABOUT US</h4>
-            <p class="parag text-left m-3">Mayura comes from the language of Sanskrit meaning peacock, widely regarded as a symbol of elegance and grace. Here at Mayura, we believe that food is a celebration of life and that traditional foods are an enduring part of our culture. Family owned and operated, we challenge ourselves everyday to live up to our name by preparing and serving traditional, Indian home style meals with devotion, elegance, and grace.</p>
-            <p class="parag text-left m-3">Each of us has special memories of home-made-food - the kind that keeps us longing for it when we are away from home. Capturing this authentic flavor has become a critical undertaking for Mayura and we are proud to continue to cook traditional meals from recipes perfected from over thousands of years.</p>
-        </div>
-        <div class="col-lg-6 mx-auto">
-            <img src="img/about.jpg" class="card-img-top" alt="...">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="chefs" class="m-5">
-    <div class="container">
-      <div class="row bg-white">
-        <div class="col-lg-12 mx-auto mb-2">
-                <h4 class="text-center mt-4">Meet our chefs</h4>
-                <p class="card-text text-center"><small class="text-muted">THEY ARE NICE & FRIENDLY</small></p>
-                <div class="card-group">
-                        <div class="card m-2 hovereffect">
-                          <img src="sys/chef-1.jpg" class="card-img-top" alt="...">
-                          <div class="overlay">
-                                <h2>Ibrahim</h2>
-                                <a class="info" href="#">link here</a>
-                          </div>
-                        </div>
-                        <div class="card m-2 hovereffect">
-                          <img src="sys/chef-2.jpg" class="card-img-top" alt="...">
-                          <div class="overlay">
-                                <h2>Ramya</h2>
-                                <a class="info" href="#">link here</a>
-                          </div>
-                        </div>
-                        <div class="card m-2 hovereffect">
-                          <img src="sys/chef-3.jpg" class="card-img-top" alt="...">
-                          <div class="overlay">
-                                <h2>Gholi</h2>
-                                <a class="info" href="#">link here</a>
-                          </div>
-                        </div>
-                        <div class="card m-2 hovereffect">
-                          <img src="sys/chef-4.jpg" class="card-img-top" alt="...">
-                          <div class="overlay">
-                                <h2>Dhamu</h2>
-                                <a class="info" href="#">link here</a>
-                          </div>
-                        </div>
-                        <div class="card m-2 hovereffect">
-                          <img src="sys/chef-5.jpg" class="card-img-top" alt="...">
-                          <div class="overlay">
-                                <h2>vekatesh bhat</h2>
-                                <a class="info" href="#">link here</a>
-                          </div>
-                        </div>
-                      </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="Menus" class="m-5">
-    <div class="container">
-      <div class="row bg-white">
-        <div class="col-lg-12 mx-auto">
-            <h4 class="text-center mt-4">Our Menus</h4>
-            <p class="card-text text-center"><small class="text-muted">TEA TIME & DINING</small></p>
-            <div class="col-lg-12 mx-auto mt-3">
-              <div class="d-flex flex-row bd-highlight justify-content-center">
-                  <div class="bd-highlight hovereffect"><img src="sys/menu-1.jpg" class="h-100 w-100" alt="...">
-                    <div class="overlay">
-                            <h2>steak</h2>
-                      </div>
+        <div class="col-sm-4 mr-4 p-3" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+            <div class="card mb-3" style="max-width: 540px;border: none;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="/sys/user.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Users</h5>
+                      <button type="button" class="btn btn-secondary btn-sm">
+                          Number of Users <span class="badge badge-light"><% if(userTotal != "") { %>  <%= userTotal %> <% } else { %> 0 <% } %></span>
+                     </button>
+                    </div>
+                  </div>
                 </div>
-                  <div class="bd-highlight hovereffect"><img src="sys/menu-2.jpg" class="h-100 w-100" alt="...">
-                    <div class="overlay">
-                            <h2>Milk & bread</h2>
-                      </div>
-                  </div>
-                  <div class="bd-highlight hovereffect"><img src="sys/menu-3.jpg" class="h-100 w-100" alt="...">
-                    <div class="overlay">
-                            <h2>Ladess & bread</h2>
-                      </div>
-                  </div>
-              </div>
-              <div class="d-flex flex-row bd-highlight justify-content-center">
-                  <div class="bd-highlight hovereffect"><img src="sys/menu-4.jpg" class="h-100 w-100" alt="...">
-                      <div class="overlay">
-                              <h2>Bid & bread</h2>
-                        </div>
-                  </div>
-                  <div class="bd-highlight hovereffect"><img src="sys/menu-5.jpg" class="h-100 w-100" alt="...">
-                    <div class="overlay">
-                            <h2>Mtawem & bread</h2>
-                      </div>
-                  </div>
-                  <div class="bd-highlight hovereffect"><img src="sys/chef-6.jpg" class="h-100 w-100" alt="...">
-                    <div class="overlay">
-                            <h2>Ibrahim</h2>
-                      </div>
-                  </div>
-              </div>
             </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <footer id="reserve" class="bg-white">
-      <hr>
-      <div class="container">
-        <div class="row mt-5">
-          <div class="col-sm">
-            <h4 class="mb-3">Find Us</h4>
-            <p class="parag text-left">Coimbatore</p>
-            <p class="parag text-left">Peelamedu</p>
-            <p class="parag text-left">606203</p>
-          </div>
-          <div class="col-sm">
-            <h4 class="mb-3">Open Hours</h4>
-            <p class="parag text-left">Sunday: Closed</p>
-            <p class="parag text-left">Monday - Friday | 7:00 AM - 9:00 PM</p>
-            <p class="parag text-left">Saturday - Sunday | 11:00 AM - 10:00 PM</p>
-          </div>
-          <div class="col-sm">
-            <h4 class="mb-3">Reservation</h4>
-            <p class="parag text-left">040-070-0880 | 010-090-0490</p>
-            <p class="parag text-left">mayura@gmail.com</p>
-            <p class="parag text-left">LINE: some000</p>
-          </div>
+        <div class="col-sm-3 mr-4 p-3" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+            <div class="card mb-3" style="max-width: 540px;border: none;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="/sys/waiter.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Waiters</h5>
+                      <button type="button" class="btn btn-secondary btn-sm">
+                          Number of Waiters <span class="badge badge-light"><% if(waiterTotal != "") { %>  <%= waiterTotal %> <% } else { %> 0 <% } %></span>
+                     </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 mr-2 p-3" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+            <div class="card mb-3" style="max-width: 540px;border: none;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="/sys/customer.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Customers</h5>
+                      <button type="button" class="btn btn-secondary btn-sm">
+                          Number of Customers <span class="badge badge-light"><% if(customerTotal != "") { %>  <%= customerTotal %> <% } else { %> 0 <% } %></span>
+                     </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
         </div>
         
+    </div>
 
-    </footer>
+    <div class="row mt-4">
 
-<%- include('base/footer') -%>
+        <div class="col-sm-4 mr-4 p-3" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+            <div class="card mb-3" style="max-width: 540px;border: none;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="/sys/chef.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Chefs</h5>
+                      <button type="button" class="btn btn-secondary btn-sm">
+                          Number of Chefs <span class="badge badge-light"><% if(chefTotal != "") { %>  <%= chefTotal %> <% } else { %> 0 <% } %></span>
+                     </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3 mr-4 p-3" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+            <div class="card mb-3" style="max-width: 540px;border: none;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="/sys/table.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Tables</h5>
+                      <button type="button" class="btn btn-secondary btn-sm">
+                          Number of Tables <span class="badge badge-light"><% if(tableTotal != "") { %>  <%= tableTotal %> <% } else { %> 0 <% } %></span>
+                     </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 mr-2 p-3" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+            <div class="card mb-3" style="max-width: 540px;border: none;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="/sys/food.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Foods</h5>
+                      <button type="button" class="btn btn-secondary btn-sm">
+                         Number of Foods <span class="badge badge-light"><% if(foodTotal != "") { %>  <%= foodTotal %> <% } else { %> 0 <% } %></span>
+                     </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+    <div class="row mt-4">
+
+        <div class="col-sm-4 mr-4 p-3" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+            <div class="card mb-3" style="max-width: 540px;border: none;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="/sys/drink.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Drinks</h5>
+                      <button type="button" class="btn btn-secondary btn-sm">
+                          Number of Drinks <span class="badge badge-light"><% if(drinkTotal != "") { %>  <%= drinkTotal %> <% } else { %> 0 <% } %></span>
+                     </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-3 mr-4 p-3" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+          
+            <div class="card mb-3" style="max-width: 540px;border: none;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="/sys/bill.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">bills</h5>
+                      <button type="button" class="btn btn-secondary btn-sm">
+                          Number of bills <span class="badge badge-light"><% if(billTotal != "") { %>  <%= billTotal %> <% } else { %> 0 <% } %></span>
+                     </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-4 mr-2 p-3" style="box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);">
+            <div class="card mb-3" style="max-width: 540px;border: none;">
+                <div class="row no-gutters">
+                  <div class="col-md-4">
+                    <img src="/sys/booking.png" class="card-img" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">Booking</h5>
+                      <button type="button" class="btn btn-secondary btn-sm">
+                          Number of Booking <span class="badge badge-light"><% if(bookingTotal != "") { %>  <%= bookingTotal %> <% } else { %> 0 <% } %></span>
+                     </button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>
+<%- include('../base/footer') -%>
